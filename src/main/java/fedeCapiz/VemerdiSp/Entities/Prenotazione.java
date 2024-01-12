@@ -13,7 +13,7 @@ import java.time.LocalDate;
 @NoArgsConstructor
 public class Prenotazione {
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
     private LocalDate inizioPrenotazione = LocalDate.now();
     private LocalDate finePrenotazione = inizioPrenotazione.plusDays(1);

@@ -12,7 +12,7 @@ import lombok.Setter;
 @NoArgsConstructor
 public class Base {
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
     String descrizione ;
     @Enumerated(EnumType.STRING)

@@ -14,13 +14,13 @@ import java.util.List;
 
 public class Persona {
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
     String nomeVero;
     String username;
     String mail;
     // nel service ci vorra il controllo per l'email
-    @OneToMany(mappedBy = "persona",cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "persona")
     protected List<Prenotazione> listaDiPrenotazioni;
 
     public Persona(String nomeVero, String username, String mail) {

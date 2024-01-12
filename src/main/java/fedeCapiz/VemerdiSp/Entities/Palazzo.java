@@ -15,13 +15,13 @@ import java.util.List;
 public class Palazzo {
 
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
     String nome  ;
     String indirizzo ;
     String citta;
 
-    @OneToMany(mappedBy = "palazzo",cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "palazzo")
     protected List<Base> listaDelleBasi  ;
 
 
