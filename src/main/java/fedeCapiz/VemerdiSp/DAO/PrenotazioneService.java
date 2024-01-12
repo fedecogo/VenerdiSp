@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
+import java.util.UUID;
 
 @Service
 @Slf4j
@@ -30,7 +31,7 @@ public class PrenotazioneService {
     private boolean isBaseAvailable(Base base) {
         return base != null && base.isLibero();
     }
-    public Optional<Prenotazione> findById(Long id) {
+    public Optional<Prenotazione> findById(UUID id) {
         return prenotazioneDAO.findById(id);
     }
     public List<Prenotazione> findAll() {

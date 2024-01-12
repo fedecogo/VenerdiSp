@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
+import java.util.UUID;
 
 @Service
 @Slf4j
@@ -18,7 +19,7 @@ public class PalazzoService {
         palazzoDAO.save(palazzo);
         System.out.println("Ciao da ajeje;)");
     }
-    public Optional<Palazzo> findById(Long id) {
+    public Optional<Palazzo> findById(UUID id) {
         return palazzoDAO.findById(id);
     }
 

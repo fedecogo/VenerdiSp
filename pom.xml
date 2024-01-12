@@ -42,11 +42,7 @@
 			<artifactId>javafaker</artifactId>
 			<version>1.0.2</version>
 		</dependency>
-		<dependency>
-			<groupId>com.fasterxml.uuid</groupId>
-			<artifactId>java-uuid-generator</artifactId>
-			<version>4.0.1</version>
-		</dependency>
+
 	</dependencies>
 
 	<build>

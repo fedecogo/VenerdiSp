@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
+import java.util.UUID;
 
 @Service
 @Slf4j
@@ -17,7 +18,7 @@ public class BaseService {
         baseDAO.save(base);
         System.out.println("Daje roma daje dal baseServic, ajeje è in zona");
     }
-    public Optional<Base> findById(Long id){
+    public Optional<Base> findById(UUID id){
         return baseDAO.findById(id);
     }
     public List<Base> findAll(){

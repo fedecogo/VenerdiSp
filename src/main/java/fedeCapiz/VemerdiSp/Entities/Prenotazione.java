@@ -6,6 +6,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import java.time.LocalDate;
+import java.util.UUID;
 
 @Entity
 @Getter
@@ -13,8 +14,8 @@ import java.time.LocalDate;
 @NoArgsConstructor
 public class Prenotazione {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private long id;
+    @GeneratedValue
+    private UUID id;
     private LocalDate inizioPrenotazione = LocalDate.now();
     private LocalDate finePrenotazione = inizioPrenotazione.plusDays(1);
     @ManyToOne
