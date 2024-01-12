@@ -49,6 +49,7 @@ public class Runner implements CommandLineRunner {
 
         List<Persona> persone = personaService.findAll();
         System.out.println("ecco le persone nel database");
+        System.out.println("ecco le persone nel database");
         for (Persona p : persone) {
             System.out.println("id " + p.getId() + ", nome " + p.getNomeVero() + ", username " + p.getUsername() + ", mail " + p.getMail());
         }
