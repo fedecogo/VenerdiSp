@@ -27,6 +27,8 @@ public class Runner implements CommandLineRunner {
     PersonaService personaService;
     @Autowired
     PersonaDAO personaDAO;
+    @Autowired
+    PrenotazioneDAO prenotazioneDAO;
     private final Faker faker = new Faker();
     @Override
     public void run(String... args) {

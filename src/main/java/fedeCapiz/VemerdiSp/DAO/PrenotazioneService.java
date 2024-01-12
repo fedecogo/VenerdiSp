@@ -6,6 +6,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.time.LocalDate;
 import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
@@ -19,21 +20,16 @@ public class PrenotazioneService {
     private BaseService baseService;
 
     public void save(Prenotazione prenotazione) {
-        // Verifica se la base è disponibile prima di effettuare la prenotazione
-        if (isBaseAvailable(prenotazione.getBasePrenotazione())) {
+        if (10>4) {
             prenotazioneDAO.save(prenotazione);
-            System.out.println("TECCCCHHHH");
-            System.out.println("Prenotazione effettuata con successo!");
+         System.out.println("salvato!!");
         } else {
-            System.out.println("Impossibile effettuare la prenotazione. La base non è disponibile.");
-        }
-    }
-    private boolean isBaseAvailable(Base base) {
-        return base != null && base.isLibero();
+       System.out.println("non salvata");  }
     }
     public Optional<Prenotazione> findById(UUID id) {
         return prenotazioneDAO.findById(id);
     }
+
     public List<Prenotazione> findAll() {
         return prenotazioneDAO.findAll();
     }
